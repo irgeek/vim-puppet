@@ -72,7 +72,7 @@ function! GetPuppetIndent()
     if line =~ '^\s*}\s*els\(e\|if\).*{\s*$'
         let ind -= &sw
     endif
-    
+
     " Don't indent resources that are one after another with a ->(ordering arrow)
     " file {'somefile':
     "    ...
@@ -81,9 +81,9 @@ function! GetPuppetIndent()
     " package { 'mycoolpackage':
     "    ...
     " }
-    if line =~ '->$'
-        let ind -= &sw
-    endif
+    "if line =~ '->$'
+    "    let ind -= &sw
+    "endif
 
 
     return ind
